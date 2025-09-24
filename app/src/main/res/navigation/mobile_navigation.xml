@@ -8,18 +8,24 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.appsnicolas.huilatravel.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_inicio"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.appsnicolas.huilatravel.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_rutas"
+        android:name="com.appsnicolas.huilatravel.ui.rutas.RutasFragment"
+        android:label="@string/title_rutas"
+        tools:layout="@layout/fragment_rutas" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.appsnicolas.huilatravel.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_favoritos"
+        android:name="com.appsnicolas.huilatravel.ui.favoritos.FavoritosFragment"
+        android:label="@string/title_favoritos"
+        tools:layout="@layout/fragment_favoritos" />
+
+    <fragment
+        android:id="@+id/navigation_perfil"
+        android:name="com.appsnicolas.huilatravel.ui.perfil.PerfilFragment"
+        android:label="@string/title_perfil"
+        tools:layout="@layout/fragment_perfil" />
 </navigation>

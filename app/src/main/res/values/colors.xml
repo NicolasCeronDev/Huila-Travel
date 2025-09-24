@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Paleta de colores cafe y verde del Huila -->
+    <color name="color_primary">#2E5C3F</color>      <!-- Verde oscuro -->
+    <color name="color_primary_dark">#1E3D2B</color> <!-- Verde más oscuro -->
+    <color name="color_secondary">#BF8A49</color>    <!-- Marrón tierra -->
+    <color name="color_accent">#D4A55D</color>       <!-- Dorado claro -->
+
+    <!-- Colores neutros -->
+    <color name="background">#F5F5F5</color>         <!-- Fondo claro -->
+    <color name="surface">#FFFFFF</color>            <!-- Superficie blanca -->
+    <color name="text_primary">#212121</color>       <!-- Texto oscuro -->
+    <color name="text_secondary">#757575</color>     <!-- Texto gris -->
 </resources>

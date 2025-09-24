@@ -1,13 +1,13 @@
-package com.appsnicolas.huilatravel.ui.dashboard
+package com.appsnicolas.huilatravel.ui.rutas
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class RutasViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+        value = "This is rutas Fragment"
     }
     val text: LiveData<String> = _text
 }
