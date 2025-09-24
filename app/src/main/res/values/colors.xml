@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
     <!-- Paleta de colores cafe y verde del Huila -->
     <color name="color_primary">#2E5C3F</color>      <!-- Verde oscuro -->
     <color name="color_primary_dark">#1E3D2B</color> <!-- Verde más oscuro -->
