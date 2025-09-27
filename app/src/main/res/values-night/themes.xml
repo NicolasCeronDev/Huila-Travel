@@ -1,18 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.HuilaTravel" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-
-        <!-- Primary brand color. -->
-
+    <style name="Theme.HuilaTravel" parent="Theme.Material3.DayNight">
+        <!-- COLOR PRIMARIO (Verde Huila) -->
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryVariant">@color/color_primary_dark</item>
-        <item name="colorOnPrimary">@color/color_secondary</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/color_accent</item>
-        <item name="colorSecondaryVariant">@color/color_primary_dark</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- COLOR SECUNDARIO (Marrón Tierra) -->
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- FONDOS Y SUPERFICIES -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <!-- BARRA DE ESTADO -->
+        <item name="android:statusBarColor">@color/color_primary_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>

@@ -5,7 +5,11 @@
         <item name="colorSecondary">@color/color_secondary</item>
         <item name="colorSecondaryVariant">@color/color_accent</item>
         <item name="android:statusBarColor">@color/color_primary_dark</item>
-
-
+    </style>
+    <style name="Widget.HuilaTravel.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@drawable/bottom_nav_icon_selector</item>
+        <item name="itemTextColor">@drawable/bottom_nav_text_selector</item>
+        <item name="itemBackground">@drawable/bottom_nav_item_background</item>
+        <item name="android:background">@color/surface</item>
     </style>
 </resources>

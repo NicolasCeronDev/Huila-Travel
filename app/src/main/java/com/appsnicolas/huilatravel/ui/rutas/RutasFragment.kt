@@ -28,7 +28,7 @@ class RutasFragment : Fragment() {
         _binding = FragmentRutasBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
+        val textView: TextView = binding.textRutas
         rutasViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

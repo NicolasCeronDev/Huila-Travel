@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class FavoritosViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Bienvenido a la app Huila.travel"
+        value = " Tus favoritos "
     }
     val text: LiveData<String> = _text
 }
