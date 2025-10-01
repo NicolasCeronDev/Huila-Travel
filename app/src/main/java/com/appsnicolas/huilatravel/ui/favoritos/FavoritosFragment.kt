@@ -4,17 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.appsnicolas.huilatravel.R // Importación añadida
 import com.appsnicolas.huilatravel.databinding.FragmentFavoritosBinding
 
 class FavoritosFragment : Fragment() {
 
     private var _binding: FragmentFavoritosBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,17 +19,18 @@ class FavoritosFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val favoritosViewModel =
-            ViewModelProvider(this).get(FavoritosViewModel::class.java)
-
         _binding = FragmentFavoritosBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        val textView: TextView = binding.textNotifications
-        favoritosViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Configurar el click del botón para ir al inicio
+        binding.buttonExplorar.setOnClickListener {
+            // Navegar al fragmento de inicio
+            findNavController().navigate(R.id.navigation_home)
         }
-        return root
     }
 
     override fun onDestroyView() {
