@@ -4,6 +4,9 @@
     <string name="title_rutas">Rutas</string>
     <string name="title_favoritos">Favoritos</string>
     <string name="title_perfil">Perfil</string>
+    <string name="route_image">Imagen de la ruta</string>
+    <string name="favorite">Favorito</string>
+    <string name="ver_itinerario">Ver itinerario</string>
 
     <string name="search_icon">Icono buscar</string>
     <string name="search_hint">Buscar cascadas, comida, pueblos...</string>
