@@ -21,4 +21,9 @@
     <color name="nav_inactive">@color/color_primary</color>
 
 
+    <color name="primary">#3E2A00</color>
+    <color name="accent">#D6C28A</color>
+    <color name="primaryText">#3E2A00</color>
+    <color name="bottom_nav_tint">#FF6B4A00</color> <!-- ajusta si quieres -->
+
 </resources>

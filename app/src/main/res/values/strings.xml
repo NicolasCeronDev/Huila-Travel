@@ -5,6 +5,11 @@
     <string name="title_favoritos">Favoritos</string>
     <string name="title_perfil">Perfil</string>
 
+    <string name="search_icon">Icono buscar</string>
+    <string name="search_hint">Buscar cascadas, comida, pueblos...</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="hero_image_description">Hero image</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
