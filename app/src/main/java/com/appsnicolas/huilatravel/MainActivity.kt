@@ -1,35 +1,40 @@
 package com.appsnicolas.huilatravel
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.appsnicolas.huilatravel.databinding.ActivityMainBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var recyclerLugares: RecyclerView
+    private lateinit var fabExplorar: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        recyclerLugares = findViewById(R.id.recyclerLugares)
+        fabExplorar = findViewById(R.id.fabExplorar)
 
-        val navView: BottomNavigationView = binding.navView
+        // Configurar el RecyclerView como carrusel horizontal
+        recyclerLugares.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_rutas, R.id.navigation_favoritos, R.id.navigation_perfil
-            )
+        // Datos de ejemplo
+        val lugares = listOf(
+            Lugar("Desierto de la Tatacoa", "Un paisaje árido y mágico", R.drawable.tatacoa),
+            Lugar("Cueva de los Guácharos", "Parque natural lleno de vida", R.drawable.guacharos),
+            Lugar("Represa de Betania", "Bellos paisajes y deportes acuáticos", R.drawable.betania),
+            Lugar("Nevado del Huila", "El punto más alto del sur colombiano", R.drawable.nevado)
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+
+        recyclerLugares.adapter = LugarAdapter(lugares)
+
+        fabExplorar.setOnClickListener {
+            Toast.makeText(this, "Explorando lugares cercanos...", Toast.LENGTH_SHORT).show()
+        }
     }
 }
