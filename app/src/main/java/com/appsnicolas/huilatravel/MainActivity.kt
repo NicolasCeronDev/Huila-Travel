@@ -1,40 +1,35 @@
 package com.appsnicolas.huilatravel
 
 import android.os.Bundle
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import android.widget.Toast
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.appsnicolas.huilatravel.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var recyclerLugares: RecyclerView
-    private lateinit var fabExplorar: FloatingActionButton
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        recyclerLugares = findViewById(R.id.recyclerLugares)
-        fabExplorar = findViewById(R.id.fabExplorar)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        // Configurar el RecyclerView como carrusel horizontal
-        recyclerLugares.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val navView: BottomNavigationView = binding.navView
 
-        // Datos de ejemplo
-        val lugares = listOf(
-            Lugar("Desierto de la Tatacoa", "Un paisaje árido y mágico", R.drawable.tatacoa),
-            Lugar("Cueva de los Guácharos", "Parque natural lleno de vida", R.drawable.guacharos),
-            Lugar("Represa de Betania", "Bellos paisajes y deportes acuáticos", R.drawable.betania),
-            Lugar("Nevado del Huila", "El punto más alto del sur colombiano", R.drawable.nevado)
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_home, R.id.navigation_rutas, R.id.navigation_favoritos, R.id.navigation_perfil
+            )
         )
-
-        recyclerLugares.adapter = LugarAdapter(lugares)
-
-        fabExplorar.setOnClickListener {
-            Toast.makeText(this, "Explorando lugares cercanos...", Toast.LENGTH_SHORT).show()
-        }
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 }

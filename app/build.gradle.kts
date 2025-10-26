@@ -50,9 +50,6 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    implementation("com.google.android.material:material:1.9.0")
-
-
     implementation("androidx.cardview:cardview:1.0.0")
 
     testImplementation(libs.junit)
