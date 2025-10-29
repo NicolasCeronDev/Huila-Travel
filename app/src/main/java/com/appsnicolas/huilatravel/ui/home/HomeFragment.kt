@@ -4,53 +4,38 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.appsnicolas.huilatravel.R
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.appsnicolas.huilatravel.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
+
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var homeAdapter: HomeAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    ): View {
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 1. Obtener referencias
-        val btnLogin = view.findViewById<Button>(R.id.btnLogin)
-        val etSearch = view.findViewById<EditText>(R.id.et_search) // Keep for now, might be used later
-
-        // 2. Establecer Listeners de forma segura con el operador '?'
-
-        // Botón de Login
-        btnLogin?.setOnClickListener {
-            Toast.makeText(requireContext(), "Pantalla de inicio de sesión (pendiente)", Toast.LENGTH_SHORT).show()
+        // Set up RecyclerView
+        homeAdapter = HomeAdapter()
+        binding.recyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = homeAdapter
         }
+    }
 
-
-        // Eventos de Categorías (se requiere el operador '?' para evitar el crash)
-        view.findViewById<ImageButton>(R.id.btn_cat_all)?.setOnClickListener {
-            Toast.makeText(requireContext(), "Ver todo", Toast.LENGTH_SHORT).show()
-        }
-
-        view.findViewById<ImageButton>(R.id.btn_cat_places)?.setOnClickListener {
-            Toast.makeText(requireContext(), "Ver Lugares", Toast.LENGTH_SHORT).show()
-        }
-
-        view.findViewById<ImageButton>(R.id.btn_cat_food)?.setOnClickListener {
-            Toast.makeText(requireContext(), "Ver Comida", Toast.LENGTH_SHORT).show()
-        }
-
-        view.findViewById<ImageButton>(R.id.btn_cat_routes)?.setOnClickListener {
-            Toast.makeText(requireContext(), "Ver Rutas", Toast.LENGTH_SHORT).show()
-        }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

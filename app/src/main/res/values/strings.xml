@@ -4,6 +4,9 @@
     <string name="title_rutas">Rutas</string>
     <string name="title_favoritos">Favoritos</string>
     <string name="title_perfil">Perfil</string>
+    <string name="route_image">Imagen de la ruta</string>
+    <string name="favorite">Favorito</string>
+    <string name="ver_itinerario">Ver itinerario</string>
 
     <string name="search_icon">Icono buscar</string>
     <string name="search_hint">Buscar cascadas, comida, pueblos...</string>
@@ -12,4 +15,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_hero_title">Huila Travel</string>
+    <string name="home_hero_subtitle">Descubre la aventura en el sur de Colombia</string>
+    <string name="popular_places">Lugares Populares</string>
+    <string name="place_name_guacharos">Cueva de los Guácharos</string>
+    <string name="place_name_nevado">Nevado del Huila</string>
+    <string name="place_name_desierto">Desierto de la Tatacoa</string>
+    <string name="place_name_parque">Parque Arqueológico</string>
+
+    <string name="todo">Todo</string>
+    <string name="lugares">Lugares</string>
+    <string name="comida">Comida</string>
+    <string name="rutas">Rutas</string>
 </resources>
