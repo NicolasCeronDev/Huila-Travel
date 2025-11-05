@@ -1,17 +1,17 @@
 package com.appsnicolas.huilatravel.ui.perfil
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.appsnicolas.huilatravel.databinding.FragmentPerfilBinding
+import com.appsnicolas.huilatravel.ui.login.LoginActivity
 
 class PerfilFragment : Fragment() {
-    private var _binding: FragmentPerfilBinding? = null
 
+    private var _binding: FragmentPerfilBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,17 +19,17 @@ class PerfilFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val PerfilViewModel =
-            ViewModelProvider(this).get(PerfilViewModel::class.java)
-
         _binding = FragmentPerfilBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        val textView: TextView = binding.textPerfil
-        PerfilViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.loginButtonProfile.setOnClickListener {
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            startActivity(intent)
         }
-        return root
     }
 
     override fun onDestroyView() {

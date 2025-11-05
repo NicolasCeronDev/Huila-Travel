@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.HuilaTravel" parent="Theme.Material3.DayNight">
+    <style name="Theme.HuilaTravel" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- COLOR PRIMARIO (Verde Huila) -->
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryVariant">@color/color_primary_dark</item>
@@ -16,7 +16,7 @@
         <item name="colorOnSurface">@color/text_primary</item>
 
         <!-- BARRA DE ESTADO -->
-        <item name="android:statusBarColor">@color/color_primary_dark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>
