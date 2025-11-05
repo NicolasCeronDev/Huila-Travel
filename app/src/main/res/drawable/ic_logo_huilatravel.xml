@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Sombrero de Aventura (Color Beige/Café) -->
+    <path
+        android:fillColor="#795548"
+        android:pathData="M13.5,6.5C8,6.5 7,11.5 7,11.5V12.5C7,13.6 7.9,14.5 9,14.5H15C16.1,14.5 17,13.6 17,12.5V11.5C17,11.5 16,6.5 13.5,6.5Z" />
+    <path
+        android:fillColor="#795548"
+        android:pathData="M6,12.5H18C19.1,12.5 20,13.4 20,14.5V15C20,15.55 19.55,16 19,16H5C4.45,16 4,15.55 4,15V14.5C4,13.4 4.9,12.5 6,12.5Z" />
+
+</vector>
