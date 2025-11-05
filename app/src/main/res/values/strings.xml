@@ -13,6 +13,10 @@
     <string name="iniciar_sesion">Iniciar sesión</string>
     <string name="hero_image_description">Hero image</string>
 
+    <string name="itinerary_title">Itinerario: Ruta Arqueológica en 1 Día</string>
+    <string name="ver_lugar">Ver Lugar</string>
+    <string name="iniciar_ruta">INICIAR RUTA</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
