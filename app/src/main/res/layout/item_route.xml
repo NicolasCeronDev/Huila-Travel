@@ -45,8 +45,8 @@
                     android:id="@+id/btnFavorite"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/ic_favorite_border"
+                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="@string/favorite"/>
             </LinearLayout>
 
@@ -100,8 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ver itinerario"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:textColor="@android:color/white"/>
+                    android:visibility="gone" />
             </LinearLayout>
 
         </LinearLayout>

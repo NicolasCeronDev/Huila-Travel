@@ -8,6 +8,7 @@ object ApiClient {
     // Asegúrate de que tu teléfono físico esté en la misma red Wi-Fi.
     // Si usas el emulador de Android, puedes cambiar esta IP por "http://10.0.2.2/huila_travel/"
     private const val BASE_URL = "http://192.168.56.1/huila_travel/"
+    private const val BASE_URL = "http://192.168.20.15/huila_travel/"
 
     val apiService: ApiService by lazy {
         val retrofit = Retrofit.Builder()
