@@ -7,9 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    // Reemplaza "TU_DIRECCIÓN_IP_AQUÍ" con la IP de tu computadora.
-    // El puerto debe coincidir con el que usa Apache en XAMPP.
-    private const val BASE_URL = "http://172.16.75.235:80443/huila_travel/"
+    private const val BASE_URL = "http://192.168.56.1/huila_travel/"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
