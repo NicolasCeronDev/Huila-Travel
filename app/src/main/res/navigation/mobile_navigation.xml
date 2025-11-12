@@ -15,7 +15,12 @@
         android:id="@+id/navigation_rutas"
         android:name="com.appsnicolas.huilatravel.ui.rutas.RutasFragment"
         android:label="@string/title_rutas"
-        tools:layout="@layout/fragment_rutas" />
+        tools:layout="@layout/fragment_rutas">
+        <!-- Acción para ir al itinerario -->
+        <action
+            android:id="@+id/action_rutas_to_itinerario"
+            app:destination="@id/navigation_itinerario" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_favoritos"
@@ -28,4 +33,16 @@
         android:name="com.appsnicolas.huilatravel.ui.perfil.PerfilFragment"
         android:label="@string/title_perfil"
         tools:layout="@layout/fragment_perfil" />
+
+    <fragment
+        android:id="@+id/navigation_itinerario"
+        android:name="com.appsnicolas.huilatravel.ui.rutasItenerario.ItinerarioFragment"
+        android:label="Itinerario"
+        tools:layout="@layout/fragment_itinerario">
+        <argument
+            android:name="routeTitle"
+            app:argType="string"
+            android:defaultValue="Ruta" />
+    </fragment>
+
 </navigation>
